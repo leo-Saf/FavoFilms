@@ -1,0 +1,248 @@
+/* Allmän styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e9ecef; /* Ljusare bakgrund */
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .app {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Navigation */
+  nav {
+    background-color: #007bff; /* Blå bakgrund */
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centrerar navigationen */
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Rubriker */
+  h1 {
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    color: #555;
+    font-size: 2em;
+    margin-bottom: 15px;
+  }
+  
+  /* Autentisering */
+  .auth-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .auth-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .auth-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .auth-container label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #444;
+  }
+  
+  .auth-container input {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+  }
+  
+  .auth-container button {
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  .auth-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  .error {
+    color: red;
+    font-size: 0.9em;
+    text-align: center;
+  }
+  
+  /* Filmsektion */
+  .movie-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsiv grid */
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .movie-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s;
+  }
+  
+  .movie-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .movie-card img {
+    width: 100%;
+    height: auto;
+    max-height: 300px; /* Maximal höjd */
+  }
+  
+  .movie-card h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #555;
+  }
+  
+  /* Knappar */
+  button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    margin-top: 10px;
+    font-size: 1em;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Favoritsektion */
+  .favorites-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .favorite-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 220px; /* Fast bredd */
+    text-align: center;
+    transition: transform 0.2s;
+  }
+  
+  .favorite-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .favorite-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  /* Trailer container */
+.trailer {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+    margin-top: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Trailer iframe styling */
+  .trailer iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Anpassar bredden */
+    height: 100%; /* Anpassar höjden */
+    border: 0;
+  }
+  
+  /* Trailer button styling */
+  button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    margin: 10px 5px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsiv design för mindre skärmar */
+  @media (max-width: 768px) {
+    .trailer iframe {
+      height: auto; /* Anpassar höjden efter bredden */
+    }
+  }
+  
+
+
+  /* Responsiv design */
+  @media (max-width: 768px) {
+    .movie-list {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+  
+    .auth-container {
+      padding: 15px;
+    }
+  }
+  
